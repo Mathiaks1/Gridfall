@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bxkmeghi8u0qv"]
+
+[node name="BattleManager" type="Node2D"]
+
+[node name="PlayerPosition" type="Node2D" parent="."]
+
+[node name="Sprite 2D" type="Sprite2D" parent="PlayerPosition"]
+
+[node name="MonsterPosition" type="Node2D" parent="."]
+
+[node name="Sprite 2D" type="Sprite2D" parent="MonsterPosition"]
