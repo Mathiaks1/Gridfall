@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://bxkmeghi8u0qv"]
+[gd_scene load_steps=2 format=3 uid="uid://bxkmeghi8u0qv"]
+
+[ext_resource type="Script" uid="uid://c7kys4kguucf4" path="res://Scripts/battle_manager.gd" id="1_wvl2i"]
 
 [node name="BattleManager" type="Node2D"]
+script = ExtResource("1_wvl2i")
 
 [node name="PlayerPosition" type="Node2D" parent="."]
 
@@ -9,3 +12,52 @@
 [node name="MonsterPosition" type="Node2D" parent="."]
 
 [node name="Sprite 2D" type="Sprite2D" parent="MonsterPosition"]
+
+[node name="BattelUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerHPBar" type="ProgressBar" parent="BattelUI"]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="PlayerHPLabel" type="Label" parent="BattelUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MonsterHPBar" type="ProgressBar" parent="BattelUI"]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="MonsterHPLabel" type="Label" parent="BattelUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ActionButtons" type="VBoxContainer" parent="BattelUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AttackButton" type="Button" parent="BattelUI/ActionButtons"]
+layout_mode = 2
+text = "Atak"
+
+[node name="ItemButton" type="Button" parent="BattelUI/ActionButtons"]
+layout_mode = 2
+text = "Przedmioty
+"
+
+[node name="RunButton" type="Button" parent="BattelUI/ActionButtons"]
+layout_mode = 2
+text = "Ucieknij"
+
+[node name="BattleLog" type="RichTextLabel" parent="BattelUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
